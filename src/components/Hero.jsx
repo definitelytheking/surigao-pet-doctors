@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="pt-20 flex flex-col w-full ">
-          <button className="bg-[#f40005] hover:bg-[#f400049e] flex items-center justify-center text-[18px] font-poppins font-semibold py-5 rounded-2xl text-white ">
+          <button className="bg-[#00674f] hover:bg-[#038e4b] flex items-center justify-center text-[18px] font-poppins font-semibold py-5 rounded-2xl text-white ">
             24/7 CUSTOMER SERVICE
           </button>
           <p className="text-[20px] font-poppins flex items-center justify-center pt-3">

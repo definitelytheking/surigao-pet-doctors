@@ -20,6 +20,7 @@ import ProtectedRouteForUser from "./protectedRoute/ProtectedRouteForUser";
 import ProtectedRouteForAdmin from "./protectedRoute/ProtectedRouteForAdmin";
 import Loader from "./loader/Loader";
 import AddProducts from "./pages/admin/AddProducts";
+import UpdateProducts from "./pages/admin/UpdateProducts";
 
 Modal.setAppElement("#root");
 
@@ -66,6 +67,22 @@ const App = () => {
             </ProtectedRouteForAdmin>
           }
         ></Route>
+        <Route
+          path="/add-product"
+          element={
+            <ProtectedRouteForAdmin>
+              <AddProducts />
+            </ProtectedRouteForAdmin>
+          }
+        ></Route>
+        <Route
+          path="/update-product/:id"
+          element={
+            <ProtectedRouteForAdmin>
+              <UpdateProducts />
+            </ProtectedRouteForAdmin>
+          }
+        ></Route>
 
         <Route path="/" element={<Home user={user} />}></Route>
         <Route path="browsepets" element={<BrowsePets />}></Route>
@@ -76,6 +93,7 @@ const App = () => {
         <Route path="store" element={<Store />}></Route>
         <Route path="/reset-password" element={<ForgotPassword />}></Route>
         <Route path="/add-product" element={<AddProducts />}></Route>
+        <Route path="/update-product" element={<UpdateProducts />}></Route>
       </Routes>
       <ToastContainer />
     </div>

@@ -3,6 +3,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { db, storage } from "../../config/Firebase";
+import { useNavigate } from "react-router-dom";
 
 const categoryList = [
   {
@@ -26,6 +27,8 @@ const AddProducts = () => {
   const [productImage, setProductImage] = useState(null);
   const [productDescription, setProductDescription] = useState("");
   const [error, setError] = useState(""); // Add error state
+
+  const navigate = useNavigate();
 
   const types = ["image/png", "image/jpeg"];
 
@@ -73,6 +76,7 @@ const AddProducts = () => {
           setProductImage(null);
           setProductDescription("");
           document.getElementById("file").value = "";
+          navigate("/admin-dashboard");
           toast.success("Product added successfully!", {
             position: "top-center",
           });
@@ -168,7 +172,7 @@ const AddProducts = () => {
             <div className="mb-3">
               <button
                 type="submit"
-                className="bg-[#00674f] hover:bg-[#00674f9e] w-full text-white text-center py-2 font-bold rounded-md"
+                className="bg-[#00674f] hover:bg-[#00674f9e] active:bg-[#00674f] w-full text-white text-center py-2 font-bold rounded-md"
               >
                 Add Product
               </button>

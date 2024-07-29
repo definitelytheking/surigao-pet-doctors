@@ -21,6 +21,7 @@ import ProtectedRouteForAdmin from "./protectedRoute/ProtectedRouteForAdmin";
 import Loader from "./loader/Loader";
 import AddProducts from "./pages/admin/AddProducts";
 import UpdateProducts from "./pages/admin/UpdateProducts";
+import ScrollToTop from "./components/ScrollToTop";
 
 Modal.setAppElement("#root");
 
@@ -49,6 +50,7 @@ const App = () => {
 
   return (
     <div>
+      <ScrollToTop />
       <Navbar user={user} />
       <Routes>
         <Route

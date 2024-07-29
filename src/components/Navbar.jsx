@@ -17,14 +17,6 @@ const Navbar = ({ user }) => {
     textUnderlineOffset: "8px",
     color: isActive ? "#3ebb9e" : "",
   });
-
-  const [fix, setFix] = useState(false);
-
-  const setFixed = () => {
-    if (window.scrollY > 0) {
-    }
-  };
-
   const navigate = useNavigate();
 
   async function handleLogout() {

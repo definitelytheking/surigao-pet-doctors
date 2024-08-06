@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import Modal from "react-modal";
-import PokoySignUp from "../assets/pokoy-signup.png";
-import { IoMdClose } from "react-icons/io";
+import Dog from "../assets/dog.png";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../config/Firebase";
 import { setDoc, doc } from "firebase/firestore";
@@ -11,7 +10,6 @@ Modal.setAppElement("#root");
 
 const SignUpModal = () => {
   const [signUpVisible, setSignUpVisible] = useState(false);
-  const [signInVisible, setSignInVisible] = useState(false);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -65,10 +63,13 @@ const SignUpModal = () => {
         style={{
           overlay: {
             background: "rgba(78, 78, 78, 0.5)",
+            zIndex: 1000,
           },
           content: {
             width: "850px",
-            height: "850px",
+            height: "800px",
+            borderRadius: "20px",
+            padding: "0px",
             display: "flex",
             margin: "auto",
             border: "none",
@@ -81,7 +82,12 @@ const SignUpModal = () => {
             <h1 className="flex font-poppins text-[32px] text-white justify-center pt-10">
               Surigao Pet Doctors
             </h1>
-            <img src={PokoySignUp} width={835} alt="" />
+            <img
+              src={Dog}
+              width={400}
+              className="pt-10 flex justify-center items-center"
+              alt=""
+            />
           </div>
           <div className="w-[435px] bg-white pl-[48px]">
             <div className="flex">

@@ -52,7 +52,7 @@ const Navbar = ({ user }) => {
   }, []);
 
   return (
-    <div className="sticky top-0 p-[5px] border-b-[1px] bg-white border-b-gray-800 w-full font-poppins font-medium">
+    <div className="sticky z-10 top-0 p-[5px] border-b-[1px] bg-white border-b-gray-800 w-full font-poppins font-medium">
       <div className="flex justify-around items-center max-w-[1152px] mx-auto">
         <div className="flex gap-[10px]">
           <img src={logo} width={100} alt="logo" />

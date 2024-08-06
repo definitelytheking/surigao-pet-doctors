@@ -47,10 +47,13 @@ const SignInModal = () => {
         style={{
           overlay: {
             background: "rgba(78, 78, 78, 0.5)",
+            zIndex: 1000,
           },
           content: {
             width: "850px",
-            height: "850px",
+            height: "700px",
+            borderRadius: "20px",
+            padding: "0px",
             display: "flex",
             margin: "auto",
             border: "none",

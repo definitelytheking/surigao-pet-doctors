@@ -84,6 +84,7 @@ const Store = () => {
         totalProducts={filteredProducts.length}
         paginate={paginate}
         currentPage={currentPage}
+        className="mt-8"
       />
     </div>
   );
